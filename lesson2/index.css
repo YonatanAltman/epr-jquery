@@ -3,7 +3,13 @@ color :lightgreen;
 font-weight: bold;
 font-family:'Courier New', Courier, monospace ;
 }
-
+p{
+    background-color: cadetblue;
+}
+.box{
+    background-color: brown;
+    color:wheat;
+}
 h1:hover{
     color: brown;
     transition: all .4s ease-in-out;
