@@ -1,8 +1,14 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 .tile{
     background-color: aquamarine;
     border: solid black 1px;
     height: 100px;
     width: 100px;
+    display: grid;
+    place-content: center;
+    font-size: xx-large;
 }
 .table{
     display: grid;
