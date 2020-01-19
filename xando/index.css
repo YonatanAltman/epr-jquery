@@ -1,0 +1,10 @@
+.tile{
+    background-color: aquamarine;
+    border: solid black 1px;
+    height: 100px;
+    width: 100px;
+}
+.table{
+    display: grid;
+    grid-template-columns: repeat(3,100px); 
+}
