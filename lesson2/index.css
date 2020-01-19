@@ -9,6 +9,7 @@ p{
 .box{
     background-color: brown;
     color:wheat;
+    height: 70px;
 }
 h1:hover{
     color: brown;

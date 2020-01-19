@@ -1,11 +1,12 @@
 // https://docs.google.com/document/d/1DjyREXiQB6zNy72Kl7D1S_Ufa9Dxbz2fDD5s9GdAHlw/edit
 console.log('Script Ready', new Date().getTime());
 
-
+// $('button').click(animateBox1);
 $(document).ready(function () {
+    $('.btn').on('click', animateBox2);
     console.log('Dom Ready', new Date().getTime());
 
-    $('button').click(animateBox1);
+
 
     $("p").click(function () {
         let whatIsThis = this;
@@ -45,26 +46,30 @@ function funcToggle(e) {
         console.log("TOGGLE END");
     });
 }
-function animateBox(){ 
+function animateBox() {
     $(".box")
-    .animate({width: "300px"})
-    .animate({height: "300px"})
-    .animate({marginLeft: "150px"})
-    .animate({borderWidth: "10px"})
-    .animate({backgroundColor: "blue"})
-    .animate({opacity: 0.5});
+        .animate({ width: "300px" })
+        .animate({ height: "300px" })
+        .animate({ marginLeft: "150px" })
+        .animate({ borderWidth: "10px" })
+        .animate({ backgroundColor: "blue" })
+        .animate({ opacity: 0.5 }, animationEnd);
 
 
 }
-function animateBox1(){ 
+function animateBox1() {
     $(".box").animate({
         width: "300px",
         height: "300px",
         marginLeft: "150px",
         borderWidth: "10px",
         opacity: 0.5,
-       
+
     });
+
+}
+function animateBox2() {
+    $(".box").stop().slideToggle(1000);
 
 }
 function funcHide(e) {
@@ -77,5 +82,9 @@ function funcHide(e) {
 function someFunction1() {
     $('body')
         .append("<h1>😎someFunction!!</h1>")
+
+}
+function animationEnd(e) { 
+console.log("animation end");
 
 }
